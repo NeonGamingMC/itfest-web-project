@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'MPlus1';
+    src: url(../fonts/MPLUS1-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+body{
+    background: linear-gradient(180deg, #3796ED 0%, #FFFFFF 100%);
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 25px auto;
+    width: 100%;
+    max-width: 960px;
+}
+
+.logo{
+    display: flex;
+    margin-left: 5px;
+    float: left;
+    align-self: center;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    list-style: none;
+    padding-left: 5px;
+}
+
+
+li a{
+    display: inline-block;
+    margin-right: 15px;
+    height: 60px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #000;
+    font-family: 'Roboto';
+}
