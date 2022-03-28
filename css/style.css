@@ -2,11 +2,216 @@
     font-family: 'MPlus';
     src: url('../fonts/MPLUS1-VariableFont_wght.ttf');
 }
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.ttf');
+}
+@keyframes slideUp {
+    from {
+        opacity: 0%;
+        transform: translate(0px,20px);
+    }
+    to {
+        opacity: 100%;
+        transform: translate(0px,0px);
+    }
+}
+
+@keyframes cloudGlide {
+    from{
+        object-position: 0%;
+    }
+    to{
+        object-position: 75%;
+    }
+}
+
+@keyframes planeFly {
+    from{
+        opacity: 0%;
+        transform: translate(-500px,100px);
+    }
+    to{
+        opacity: 100%;
+        transform: translate(0px,0px);
+    }
+}
+
+@keyframes circle1Fly {
+    from{
+        opacity: 0%;
+        transform: rotate(-359deg);
+    }
+    to{
+        opacity: 100%;
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes circle2Fly {
+    from{
+        opacity: 0%;
+        transform: rotate(359deg);
+    }
+    to{
+        opacity: 100%;
+        transform: rotate(-135deg);
+    }
+}
+
 
 body{
     background: linear-gradient(180deg, #3796ED 0%, #FFFFFF 100%);
+    height: 1024px;
+}
+
+.coloredTitle{
+    animation-name: slideUp;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
+    position: absolute;
+    left: 527px;
+    top: 137px;
+    font-family: 'MPlus';
+    font-size: 96px;
+    line-height: 139px;
+    color: #1F73AF;
+    opacity: 0;
 }
 
 .title{
+    animation-name: slideUp;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
+    position: absolute;
+    left: 527px;
+    top: 287px;
     font-family: 'MPlus';
+    font-size: 96px;
+    line-height: 139px;
+    color:#fff;
+    opacity: 0;
+}
+
+.circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.cloud{
+    animation-name: cloudGlide;
+    animation-duration: 15s;
+    animation-timing-function: cubic-bezier(0, 0, 0, 1);
+    position: absolute;
+    opacity: 50%;
+    top:-750px;
+    width: 100%;
+    height: 3000px;
+    object-fit: cover;
+    object-position: 75%;
+}
+
+.plane{
+    animation-name: planeFly;
+    animation-duration: 0.75s;
+    animation-delay: 2s;
+    position: absolute;
+    left: 197px;
+    top: 137px;
+    opacity: 0%;
+}
+
+#c1{
+    animation-name: circle1Fly;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    background: linear-gradient(90deg, #1F50FF 0%, #29AED9 100%);
+    transform: rotate(-45deg);
+    width: 120px;
+    height: 120px;
+    opacity: 0%;
+}
+
+#bgPos{
+    position: absolute;
+    left: 444px;
+    top: 112px;
+}
+
+#ci1{
+    position: absolute;
+    left: 455px;
+    top: 675px;
+}
+
+#ci2{
+    position: absolute;
+    left: 960px;
+    top: 80px;
+}
+
+#c2{
+    animation-name: circle2Fly;
+    animation-duration: 1s;
+    animation-delay: 1.5s;
+    background: linear-gradient(90deg, #5572DB 0%, #29AED9 100%);
+    transform: rotate(-135deg);
+    width: 165px;
+    height: 165px;
+    opacity: 0%;
+}
+
+#bg{
+    animation-name: slideUp;
+    animation-duration: 0.5s;
+    width: 690px;
+    height: 690px;
+    background: linear-gradient(180deg, rgba(114, 163, 236, 0.5) 75%, rgba(255, 255, 255, 0.5) 100%);
+}
+
+.shadowText{
+    font-family: 'Roboto';
+    font-size: 16px;
+    line-height: 23px;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+#txt0{
+    position: absolute;
+    animation-name: slideUp;
+    animation-duration: 0.5s;
+    animation-delay: 5s;
+    left: 1057px;
+    top: 523px;
+    opacity: 0;
+}
+#txt1{
+    position: absolute;
+    animation-name: slideUp;
+    animation-duration: 0.5s;
+    animation-delay: 6s;
+    left: 1033px;
+    top: 609px;
+    opacity: 0;
+}
+#txt2{
+    position: absolute;
+    animation-name: slideUp;
+    animation-duration: 0.5s;
+    animation-delay: 7s;
+    left: 972px;
+    top: 685px;
+    opacity: 0;
+}
+#txt3{
+    position: absolute;
+    animation-name: slideUp;
+    animation-duration: 0.5s;
+    animation-delay: 8s;
+    left: 873px;
+    top: 753px;
+    opacity: 0;
 }
